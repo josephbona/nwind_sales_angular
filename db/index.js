@@ -15,6 +15,17 @@ const Region = db.define('region', {
   }
 })
 
+function sync() {
+  return db.sync({ force: true });
+}
+
+function truncate() {
+  return Promise.all([
+    SalesPerson.destroy({ where: {}}),
+    Region.destroy({ where: {}})
+  ]);
+}
+
 function syncAndSeed(){
   return db.sync({ force: true })
     .then(function(){
@@ -31,6 +42,8 @@ function syncAndSeed(){
 
 module.exports = {
   syncAndSeed: syncAndSeed,
+  sync: sync,
+  truncate: truncate,
   models: {
     SalesPerson: SalesPerson,
     Region: Region
