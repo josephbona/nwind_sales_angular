@@ -1,3 +1,27 @@
+<div class="row" ng-controller="CompanyStatusCtrl">
+  <div class="col-sm-6">
+    <div ng-class="{'panel-default': salesPeople.length < 4, 'panel-danger': salesPeople.length >= 4}" class="panel panel-default text-center">
+      <div class="panel-heading">
+        <h3 class="panel-title">Sales People</h3>
+        <p ng-if="salesPeople.length >= 4"><small><em>Can't afford any more salespeople :(</em></small></p>
+      </div>
+      <div class="panel-body">
+        <h1><strong>{{ salesPeople.length }}</strong></h1>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div ng-class="{'panel-default': regions.length < 4, 'panel-danger': regions.length >= 4}" class="panel panel-default text-center">
+      <div class="panel-heading">
+        <h3 class="panel-title">Regions</h3>
+        <p ng-if="regions.length >= 4"><small><em>Can't cover that much ground :(</em></small></p>
+      </div>
+      <div class="panel-body">
+        <h1><strong>{{ regions.length }}</strong></h1>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="well">
   <div class="form-horizontal">
     <div class="form-group">
@@ -6,7 +30,7 @@
         <input class="form-control" id="name" type="text" ng-model="name" placeholder="Type the dude's name here...">
       </div>
       <div class="col-sm-3">
-        <button ng-click="create()" ng-disabled="!name" class="btn btn-warning btn-block" type="submit">Add Sales Person</button>
+        <button ng-click="create()" ng-disabled="!name || salesPeople.length >= 4" class="btn btn-warning btn-block" type="submit">Add Sales Person</button>
       </div>
     </div>
   </div>

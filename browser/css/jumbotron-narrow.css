@@ -40,6 +40,12 @@ body {
 .well h1 {
     margin-bottom: 21px;
 }
+.panel-heading p {
+    margin-bottom: 0;
+}
+.panel-body h1 {
+    margin: 0;
+}
 .list-group-item {
     font-size: 16px;
     line-height: 36px;

@@ -5,7 +5,16 @@ acme
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: '/home.html'
+        templateUrl: '/home.html',
+        controller: 'CompanyStatusCtrl',
+        // resolve: {
+        //   salesPeople: function(SalesPersonService) {
+        //     return SalesPersonService.findAll();
+        //   },
+        //   regions: function(RegionService) {
+        //     return RegionService.findAll();
+        //   }
+        // }
       })
       .state('salesPeople', {
         url: '/salesPeople',
