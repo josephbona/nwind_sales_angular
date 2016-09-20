@@ -1,0 +1,80 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.text-muted {
+    color: #abb1b7;
+}
+.header, .footer {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.header {
+    padding-bottom: 20px;
+}
+.header img {
+    height: 40px;
+}
+.header .nav {
+    float: none;
+    display: table;
+    margin: auto;
+}
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    text-align: center;
+    float: none;
+}
+.footer {
+    margin-top: 40px;
+    padding-top: 19px;
+    color: #abb1b7;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+.well h3 {
+    margin-top: 0;
+}
+.well h1 {
+    margin-bottom: 21px;
+}
+.list-group-item {
+    font-size: 16px;
+    line-height: 36px;
+}
+.list-group-item button {
+    float: right;
+}
+.form-group {
+    margin-bottom: 0;
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
+.container-narrow> hr {
+    margin: 30px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .header, .footer {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .header {
+        margin-bottom: 30px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+@media screen and (min-width: 450px) {
+    .header h3 {
+        text-align: left;
+        float: left;
+    }
+    .header .nav {
+        float: right;
+    }
+}
