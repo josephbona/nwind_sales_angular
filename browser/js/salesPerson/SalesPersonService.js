@@ -1,5 +1,6 @@
 acme
   .factory('SalesPersonService', function($http) {
+    var salesPeople = [];
 
     function create(salesPerson) {
       return $http.post('/api/salesPeople', salesPerson)
@@ -16,7 +17,8 @@ acme
     function findAll() {
       return $http.get('/api/salesPeople')
         .then(function(result) {
-          return result.data;
+          angular.copy(result.data, salesPeople)
+          return salesPeople;
         });
     }
 

@@ -1,8 +1,8 @@
 acme
   .controller('SalesPersonListCtrl', function($scope, SalesPersonService, salesPeople) {
     $scope.salesPeople = salesPeople;
-    $scope.create = function() {
-      SalesPersonService.create({ name: $scope.name })
+    $scope.create = function(newPerson) {
+      SalesPersonService.create(newPerson)
         .then(function(result) {
           $scope.salesPeople.push(result);
           $scope.name = '';

@@ -27,10 +27,10 @@
     <div class="form-group">
       <label class="col-sm-2 control-label" for="name">Name:</label>
       <div class="col-sm-7">
-        <input class="form-control" id="name" type="text" ng-model="name" placeholder="Type the dude's name here...">
+        <input class="form-control" id="name" type="text" ng-model="newPerson.name" placeholder="Type the dude's name here...">
       </div>
       <div class="col-sm-3">
-        <button ng-click="create()" ng-disabled="!name || salesPeople.length >= 4" class="btn btn-warning btn-block" type="submit">Add Sales Person</button>
+        <button ng-click="create(newPerson)" ng-disabled="!newPerson.name || salesPeople.length >= 4" class="btn btn-warning btn-block" type="submit">Add Sales Person</button>
       </div>
     </div>
   </div>

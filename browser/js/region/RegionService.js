@@ -1,5 +1,6 @@
 acme
   .factory('RegionService', function($http) {
+    var regions = [];
 
     function create(region) {
       return $http.post('/api/regions', region)
@@ -16,7 +17,8 @@ acme
     function findAll() {
       return $http.get('/api/regions')
         .then(function(result) {
-          return result.data;
+          angular.copy(result.data, regions);
+          return regions;
         });
     }
 

@@ -1,8 +1,8 @@
 acme
   .controller('RegionsListCtrl', function($scope, RegionService, regions) {
     $scope.regions = regions;
-    $scope.create = function() {
-      RegionService.create({ zipcode: $scope.zipcode })
+    $scope.create = function(newRegion) {
+      RegionService.create(newRegion)
         .then(function(result) {
           $scope.regions.push(result);
           $scope.zipcode = '';
