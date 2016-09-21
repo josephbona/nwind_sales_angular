@@ -5,7 +5,7 @@ acme
       RegionService.create(newRegion)
         .then(function(result) {
           $scope.regions.push(result);
-          $scope.zipcode = '';
+          $scope.newRegion.zipcode = '';
         })
         .catch(function(err) {
           console.error(err);

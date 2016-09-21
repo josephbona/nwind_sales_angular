@@ -5,7 +5,7 @@ acme
       SalesPersonService.create(newPerson)
         .then(function(result) {
           $scope.salesPeople.push(result);
-          $scope.name = '';
+          $scope.newPerson.name = '';
         })
         .catch(function(err) {
           console.error(err);
