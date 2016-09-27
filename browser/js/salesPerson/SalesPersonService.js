@@ -5,13 +5,13 @@ acme
     function create(salesPerson) {
       return $http.post('/api/salesPeople', salesPerson)
         .then(function(result) {
-          return result.data;
+          return findAll();
         });
     }
     function destroy(salesPersonId) {
       return $http.delete('/api/salesPeople/' + salesPersonId)
         .then(function(result) {
-          return result.data;
+          return findAll();
         });
     }
     function findAll() {

@@ -1,19 +1,6 @@
-const Sequelize = require('sequelize');
-const db = new Sequelize(process.env.DATABASE_URL);
-
-const SalesPerson = db.define('salesPerson', {
-  name: {
-    type: Sequelize.STRING,
-    allowNull: false
-  }
-});
-
-const Region = db.define('region', {
-  zipcode: {
-    type: Sequelize.INTEGER,
-    allowNull: false
-  }
-})
+const db = require('./_db');
+const SalesPerson =  require('./salesPerson');
+const Region = require('./region');
 
 function sync() {
   return db.sync({ force: true });

@@ -33,6 +33,30 @@
         </ul>
       </nav>
     </div>
+    <div class="row" ng-controller="CompanyStatusCtrl">
+      <div class="col-sm-6">
+        <div ng-class="{'panel-default': salesPeople.length < 4, 'panel-danger': salesPeople.length >= 4}" class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h3 class="panel-title">Sales People</h3>
+            <p ng-if="salesPeople.length >= 4"><small><em>Can't afford any more salespeople :(</em></small></p>
+          </div>
+          <div class="panel-body">
+            <h1><strong>{{ salesPeople.length }}</strong></h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div ng-class="{'panel-default': regions.length < 4, 'panel-danger': regions.length >= 4}" class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h3 class="panel-title">Regions</h3>
+            <p ng-if="regions.length >= 4"><small><em>Can't cover more ground :(</em></small></p>
+          </div>
+          <div class="panel-body">
+            <h1><strong>{{ regions.length }}</strong></h1>
+          </div>
+        </div>
+      </div>
+    </div>
     <ui-view></ui-view>
     <footer class="footer">
       <p>&copy; 2016 ACME Company, Inc.</p>

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "DATABASE_URL=postgres://localhost/acme_sales_angular_test nodemon ./node_modules/mocha/bin/mocha",
-    "start:dev": "SYNC=true DATABASE_URL=postgres://localhost/acme_sales_angular nodemon --ignore 'browser' server"
+    "start:dev": "SYNC=true DATABASE_URL=postgres://localhost/acme nodemon --ignore 'browser' server"
   },
   "author": "",
   "license": "ISC",
